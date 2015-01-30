@@ -23,7 +23,7 @@ class ShoppingHistory
 
         foreach ($this->shoppingCartIds as $id)
         {
-            $shoppingCarts = $this->gateway->retrieve($id);
+            $shoppingCarts[] = $this->gateway->retrieve($id);
         }
 
         return $shoppingCarts;
